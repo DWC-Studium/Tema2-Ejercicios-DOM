@@ -1,0 +1,31 @@
+<html>
+<body>
+  <div>Users:</div>
+  <ul>
+    <li>Juan</li>
+    <li>Pedro</li>
+  </ul>
+  <script>
+/**
+ * Para cada uno de los siguientes elementos, da al menos una manera de acceder a ellos:
+ * El nodo DOM <div>
+ * El nodo DOM <ul>
+ * El segundo <li> (el de Pedro)
+*/
+      //Primera parte
+      let div1 =document.body.children[0];
+      let div2 =document.body.firstElementChild;
+      let div3 =document.body.childNodes[1];
+      let div4 =document.querySelectorAll('div')[0];
+      let div5 =document.getElementsByTagName('div')[0];
+
+      //Segunda parte
+      let ul1 =document.body.children[1];
+      let ul2 =document.body.lastElementChild;
+
+      //Tercera parte
+      let li_pedro = document.body.lastElementChild.lastElementChild;
+      let li_pedro2 = document.getElementsByTagName('li')[1];
+  </script>
+</body>
+</html>

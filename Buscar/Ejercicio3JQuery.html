@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    <form name="search">
+        <label>Search the site:
+      <input type="text" name="search">
+    </label>
+        <input type="submit" value="Search!">
+    </form>
+    <hr>
+    <form name="search-person">
+        Search the visitors:
+        <table id="age-table">
+            <tr>
+                <td>Age:</td>
+                <td id="age-list">
+                    <label>
+            <input type="radio" name="age" value="young">less than 18</label>
+                    <label>
+            <input type="radio" name="age" value="mature">18-50</label>
+                    <label>
+            <input type="radio" name="age" value="senior">more than 50</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Additionally:</td>
+                <td>
+                    <input type="text" name="info[0]">
+                    <input type="text" name="info[1]">
+                    <input type="text" name="info[2]">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Search!">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let table = $('#age-table');
+            let label = $('#age-table label');
+            let firstCell = $('#age-table td')[0];
+            let searchForm = $('form[name="search"]');
+            let inputs = $('form[name="search"] input');
+            let firstInput = inputs[0];
+            let lastInput = inputs[inputs.length - 1];
+            console.log(table);
+            console.log(label);
+            console.log(firstCell);
+            console.log(searchForm);
+            console.log(firstInput);
+            console.log(lastInput);
+        });
+    </script>
+</body>
+
+</html>
